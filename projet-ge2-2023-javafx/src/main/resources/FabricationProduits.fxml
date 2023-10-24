@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?import javafx.scene.control.ComboBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.insa.projet_info.projet_ge2_2023.controleur.DemarrerFabricationController"
+            prefWidth="1000" prefHeight="600">
+    <center>
+        <VBox style="-fx-padding: 10px;" spacing="10">
+            <TableView fx:id="posteTravailTableView">
+                <columns>
+                    <TableColumn text="Nom Prénom" fx:id="nomPrenomColumn" />
+                    <TableColumn text="Reference Machine" fx:id="referenceMachineColumn" />
+                    <TableColumn text="ID Opération" fx:id="idOperationColumn" />
+                    <TableColumn text="Description Opération" fx:id="descriptionOperationColumn" />
+                    <TableColumn text="Reference Produit" fx:id="referenceProduitColumn" />
+                    <TableColumn text="Début" fx:id="debutColumn" prefWidth="140"/>
+                    <TableColumn text="Fin" fx:id="finColumn" prefWidth="140"/>
+                    <TableColumn text="Etat" fx:id="etatColumn" />
+                </columns>
+            </TableView>
+            <Button text="Démarrer Fabrication" onAction="#demarrerFabrication" />
+        </VBox>
+    </center>
+</BorderPane>

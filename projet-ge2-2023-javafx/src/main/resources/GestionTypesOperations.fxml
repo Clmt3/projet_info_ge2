@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.insa.projet_info.projet_ge2_2023.controleur.GestionTypesOperationsController"
+            prefWidth="800" prefHeight="600">
+    <top>
+        <VBox style="-fx-padding: 10px;" spacing="10">
+            <Label text="Description :"/>
+            <TextField fx:id="descriptionField" promptText="Description"/>
+            <Button text="Ajouter Type d'Opération" onAction="#ajouterTypeOperation"/>
+        </VBox>
+    </top>
+    <bottom>
+        <HBox spacing="10">
+            <VBox style="-fx-padding: 10px;" spacing="10">
+                <TableView fx:id="tableTypesOperations">
+                    <columns>
+                        <TableColumn text="ID" fx:id="id"/>
+                        <TableColumn text="Description" fx:id="description"/>
+                    </columns>
+                </TableView>
+            </VBox>
+            <VBox style="-fx-padding: 10px;" spacing="10">
+                <HBox spacing="10">
+                    <Button text="Modifier Type d'Opération" onAction="#modifierTypeOperation" fx:id="modifierButton"/>
+                    <Button text="Supprimer Type d'Opération" onAction="#supprimerTypeOperation" fx:id="supprimerButton" disable="true"/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.insa.projet_info.projet_ge2_2023.controleur.AccueilController"
+          prefWidth="800" prefHeight="600">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="25.00" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="25.00" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="25.00" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="25.00" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS" percentHeight="50.00" />
+        <RowConstraints vgrow="ALWAYS" percentHeight="50.00" />
+    </rowConstraints>
+    <Button text="Gestion des Opérateurs" onAction="#ouvrirGestionOperateurs" style="-fx-background-color: lightblue; -fx-cursor: hand;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Button text="Gestion des Machines" onAction="#ouvrirGestionMachines" style="-fx-background-color: lightgreen; -fx-cursor: hand;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Button text="Gestion des Types d'Opérations" onAction="#ouvrirGestionTypesOperations" style="-fx-background-color: lightcoral; -fx-cursor: hand;" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+    <Button text="Gestion des Produits" onAction="#ouvrirGestionProduits" style="-fx-background-color: lightsalmon; -fx-cursor: hand;" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+    <Button text="Plan de Fabrication" onAction="#ouvrirPlanFabrication" style="-fx-background-color: lightpink; -fx-cursor: hand;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Button text="Affectation des Opérations" onAction="#ouvrirAffectationOperations" style="-fx-background-color: lightyellow; -fx-cursor: hand;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Button text="Fabrication de Produits" onAction="#ouvrirFabricationProduits" style="-fx-background-color: lightcyan; -fx-cursor: hand;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+</GridPane>

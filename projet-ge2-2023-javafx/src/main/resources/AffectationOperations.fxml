@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableColumn?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.insa.projet_info.projet_ge2_2023.controleur.AffectationOperationsController"
+            prefWidth="800" prefHeight="600">
+    <top>
+        <VBox style="-fx-padding: 10px;" spacing="10">
+            <Label text="Sélectionnez l'opérateur :"/>
+            <ComboBox fx:id="operateurComboBox" promptText="Sélectionnez l'opérateur" />
+            <Label text="Sélectionnez le produit :"/>
+            <ComboBox fx:id="produitComboBox" promptText="Sélectionnez le produit" />
+            <Label text="Sélectionnez l'opération :"/>
+            <ComboBox fx:id="operationComboBox" promptText="Sélectionnez l'opération" />
+            <Label text="Sélectionnez la machine :"/>
+            <ComboBox fx:id="machineComboBox" promptText="Sélectionnez la machine" />
+            <Button text="Affecter Opération" onAction="#affecterOperation"/>
+        </VBox>
+    </top>
+    <bottom>
+        <HBox spacing="10">
+            <!-- Partie gauche (Tableau pour les postes de travail) -->
+            <TableView fx:id="posteTravailTableView" prefWidth="600">
+                <columns>
+                    <TableColumn text="Nom Prénom" fx:id="nomPrenomColumn" />
+                    <TableColumn text="Référence Machine" fx:id="referenceMachineColumn" />
+                    <TableColumn text="ID Opération" fx:id="idOperationColumn" />
+                    <TableColumn text="Description Opération" fx:id="descriptionOperationColumn" />
+                    <TableColumn text="Référence Produit" fx:id="referenceProduitColumn" />
+                </columns>
+            </TableView>
+
+            <!-- Partie droite (Bouton Supprimer Affectation) -->
+            <VBox spacing="10">
+                <Button text="Supprimer Affectation" onAction="#supprimerAffectation"/>
+            </VBox>
+        </HBox>
+    </bottom>
+</BorderPane>

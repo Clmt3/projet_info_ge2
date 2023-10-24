@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.insa.projet_info.projet_ge2_2023.controleur.GestionProduitsController"
+            prefWidth="800" prefHeight="600">
+    <top>
+        <VBox style="-fx-padding: 10px;" spacing="10">
+            <Label text="Référence :"/>
+            <TextField fx:id="referenceField" promptText="Référence"/>
+            <Label text="Description :"/>
+            <TextField fx:id="descriptionField" promptText="Description"/>
+            <Button text="Ajouter Produit" onAction="#ajouterProduit"/>
+        </VBox>
+    </top>
+    <center>
+        <HBox>
+            <TableView fx:id="tableProduits" prefWidth="400">
+                <columns>
+                    <TableColumn text="ID" fx:id="id"/>
+                    <TableColumn text="Référence" fx:id="reference"/>
+                    <TableColumn text="Description" fx:id="description"/>
+                </columns>
+            </TableView>
+            <VBox style="-fx-padding: 10px;" spacing="10">
+                <Button text="Modifier Produit" onAction="#modifierProduit" fx:id="modifierButton" disable="true"/>
+                <Button text="Supprimer Produit" onAction="#supprimerProduit" fx:id="supprimerButton" disable="true"/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
